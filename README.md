@@ -73,3 +73,42 @@ jobs:
     - name: Run Docker container
       run: |
         docker run churn_model
+
+---
+
+### Task 5: Set Up Repository Structure (5 Points)
+
+Organize your project with the following structure:
+
+- models/              # Directory for storing the pre-trained model
+  - churn_model.pkl    # Pre-trained model pickle file
+- src/                 # Directory for deployment scripts
+  - run_model.py       # Script for interacting with the model
+- Dockerfile           # Docker configuration file
+- .github/workflows/   # CI/CD configuration files
+  - deploy.yml         # GitHub Actions workflow file
+- requirements.txt     # Python dependencies
+
+
+## Submission Instructions
+
+- Submit all necessary files, including:
+  - Python scripts (`load_model.py`, `run_model.py`),
+  - Dockerfile,
+  - CI/CD workflow file (`deploy.yml` in the `.github/workflows/` directory),
+  - Pre-trained model in the `models/` directory.
+- Ensure that your repository is organized properly as shown in **Task 5**.
+- Test the Docker container locally and make sure the pipeline works end-to-end.
+
+---
+
+## Evaluation Criteria
+
+- **Correctness of Model Loading (5 Points)**: Ensure that the pre-trained model is loaded correctly from the `models/` directory.
+- **Interactive Prediction (10 Points)**: The script should correctly prompt the user for input and return a prediction on customer churn.
+- **Dockerization (10 Points)**: The Docker image should correctly build the container and run the model for predictions.
+- **CI/CD Pipeline (10 Points)**: The GitHub Actions workflow should automate the build and execution of the Docker container.
+- **Repository Structure (5 Points)**: The project should be well-organized with a clear directory structure and proper CI/CD setup.
+
+---
+
