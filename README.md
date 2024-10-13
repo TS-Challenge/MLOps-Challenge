@@ -73,13 +73,14 @@ jobs:
     - name: Run Docker container
       run: |
         docker run churn_model
+```
 
 ---
-
 ### Task 5: Set Up Repository Structure (5 Points)
 
 Organize your project with the following structure:
 
+```
 - models/              # Directory for storing the pre-trained model
   - churn_model.pkl    # Pre-trained model pickle file
 - src/                 # Directory for deployment scripts
@@ -89,6 +90,9 @@ Organize your project with the following structure:
   - deploy.yml         # GitHub Actions workflow file
 - requirements.txt     # Python dependencies
 
+```
+
+---
 
 ## Submission Instructions
 
@@ -111,4 +115,3 @@ Organize your project with the following structure:
 - **Repository Structure (5 Points)**: The project should be well-organized with a clear directory structure and proper CI/CD setup.
 
 ---
-
